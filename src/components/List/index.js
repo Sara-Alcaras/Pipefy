@@ -8,20 +8,25 @@ import { Container } from './styles';
 
 export default function List() {
   return (
-    <Container>
+    <Container done={data.done}>
       <header>
-        <h2>Tarefas</h2>
-        <button type="button">
-          <MdAdd size={24} color="#FFF" />
-        </button>
+        <h2>{data.title}</h2>
+        {data.creatable && (
+          <button type="button">
+            <MdAdd size={24} color="#FFF" />
+          </button>
+        )}
       </header>
 
       <ul>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        { data.cards.map((card, index) => (
+          <Card 
+            key={card.id} 
+            listIndex={listIndex}
+            index={index} 
+            data={card}
+          />
+        )) }
       </ul>
 
     </Container>
