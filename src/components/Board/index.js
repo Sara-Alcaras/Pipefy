@@ -5,6 +5,8 @@ import List from '../List';
 
 import { Container } from './styles';
 
+const data = loadLists();
+
 const lists = loadLists ();
 
 export default function Board() {
