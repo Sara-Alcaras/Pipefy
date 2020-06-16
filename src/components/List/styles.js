@@ -32,5 +32,11 @@ export const Container = styled.div`
         cursor: pointer;
     }
 
+    }
+
+    ul {
+        margin-top: 30px;
+    }
+
 
 `;
